@@ -8,5 +8,5 @@ def process_command(command):
         return
     match args[2]:
         case "-r":
-            remove_r(args[2:])
+            option_r(args[2], args[3:])
             
