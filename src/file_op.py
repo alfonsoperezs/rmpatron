@@ -5,7 +5,6 @@ def option_r(path, names_files):
     content = os.listdir(path)
     for x in content:
         abs_path = os.path.join(path,x)
-        print(abs_path)
         if x in names_files:
             remove_file(abs_path)
         else:
@@ -16,7 +15,6 @@ def option_r(path, names_files):
 def remove_file(path):
     if os.path.isdir(path):
         shutil.rmtree(path)
-        print("Borrado",path)
     else:
         os.remove(path)
     
