@@ -1,9 +1,11 @@
 from command_reader import *
 
 if __name__ == '__main__':
+    run = True
+    command_reader = Command_reader() 
     print("--------------------------- Welcome to RM PATRON ---------------------------")
     print("----------------------------------------------------------------------------")
-    while True:
+    while run:
         command = input("-> ")
-        process_command(command)
+        run = command_reader.process_command(command)
         
